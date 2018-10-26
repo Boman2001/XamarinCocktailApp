@@ -7,11 +7,13 @@ namespace CocktailAppMax
 {
     public partial class App : Application
     {
+        public static bool IsUserLoggedIn { get; internal set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
